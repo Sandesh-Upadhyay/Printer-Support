@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Added printer bug theme variables */
+:root {
+  --printer-bug-bg: #0a1a2a;
+  --printer-bug-text: #e0f7ff;
+  --printer-font: "Courier New", monospace;
+}
+
+/* Apply printer bug theme globally */
+body {
+  background-color: var(--printer-bug-bg);
+  color: var(--printer-bug-text);
+  font-family: var(--printer-font);
+}
