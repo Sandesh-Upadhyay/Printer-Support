@@ -7,6 +7,7 @@ import Experts from './components/Experts';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import StickySupportLabel from './components/StickySupportLabel';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Testimonials />
       <Contact />
       <Footer />
+      <StickySupportLabel />
     </div>
   );
 }
