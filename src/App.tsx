@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -8,11 +9,11 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import StickySupportLabel from './components/StickySupportLabel';
+import PrinterSupportSystem from './components/PrinterSupportSystem';
 
-function App() {
+function HomeContent() {
   return (
-    <div className="min-h-screen printer-bug-theme">
-      <Header />
+    <>
       <Hero />
       <Services />
       <About />
@@ -21,7 +22,19 @@ function App() {
       <Contact />
       <Footer />
       <StickySupportLabel />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomeContent />} />
+        <Route path="/printer-support-system" element={<PrinterSupportSystem />} />
+      </Routes>
+    </Router>
   );
 }
 

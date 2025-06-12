@@ -1,8 +1,10 @@
 import React from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -41,8 +43,13 @@ const Header = () => {
               <div className="text-2xl font-extrabold text-black tracking-wide drop-shadow-md">
                 All IT Expert
               </div>
-              <div className="ml-2 text-sm text-black hidden sm:block font-medium">
-                Printer Support Services
+              <div className="ml-2 hidden sm:block">
+                <button
+                  className="text-sm font-medium text-black bg-blue-100 hover:bg-blue-200 px-3 py-1 rounded transition-colors border border-blue-200"
+                  onClick={() => navigate('/printer-support-system')}
+                >
+                  Printer Support Services
+                </button>
               </div>
             </div>
 
