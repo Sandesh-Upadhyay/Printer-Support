@@ -35,34 +35,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="w-full bg-gradient-to-br from-sky-50 via-white to-sky-100">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-black/10"></div>
-      <motion.div 
-        className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      <motion.div 
-        className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-
+    <section className="w-full bg-white">
+      {/* Removed animated background elements for a clean white look */}
       <motion.div 
         ref={ref}
         variants={containerVariants}

@@ -168,25 +168,7 @@ function App() {
         </div>
       </div>
 
-      {/* Right side fixed button - Modern Design */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50">
-        <div className="flex flex-col gap-4">
-          {/* Phone Support Button */}
-          <a
-            href="tel:+18884046710"
-            className="group bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-x-2 flex items-center gap-3"
-          >
-            <div className="bg-white/10 p-2 rounded-lg group-hover:bg-white/20 transition-colors">
-              <Phone className="text-yellow-300" size={24} />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-medium text-yellow-300">Call Now</span>
-              <span className="font-bold">+1-(888) 404-6710</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
+          </div>
   );
 }
 
