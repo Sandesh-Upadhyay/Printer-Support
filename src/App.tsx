@@ -6,6 +6,7 @@ import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import PrinterSupportSystem from './components/PrinterSupportSystem';
 import { Printer, Phone, MessageCircle } from 'lucide-react';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <HowItWorks />
       <Testimonials />
       <Contact />
+      <PrinterSupportSystem />
       <Footer />
 
       {/* Bottom fixed button - Modern Design */}
