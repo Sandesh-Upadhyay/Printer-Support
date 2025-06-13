@@ -6,12 +6,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const navigate = useNavigate();
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
   };
 
   return (
@@ -39,48 +36,39 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              <img src="/Printer-Logo.jpg" alt="Logo" style={{ height: '44px', marginRight: '14px', borderRadius: '6px', boxShadow: '0 2px 8px rgba(0,0,0,0.10)' }} />
-              <div className="text-2xl font-extrabold text-black tracking-wide drop-shadow-md">
-                All IT Expert
-              </div>
-              <div className="ml-2 hidden sm:block">
-                <button
-                  className="text-sm font-medium text-black bg-blue-100 hover:bg-blue-200 px-3 py-1 rounded transition-colors border border-blue-200 mr-2"
-                  onClick={() => navigate('/printer-support-system')}
-                >
-                  Printer Support System
-                </button>
-              </div>
+              <button onClick={handleLogoClick} className="focus:outline-none">
+                <img src="/Printer-Logo.jpg" alt="Logo" style={{ height: '44px', marginRight: '14px', borderRadius: '6px', boxShadow: '0 2px 8px rgba(0,0,0,0.10)' }} />
+              </button>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
               <button
-                onClick={() => scrollToSection('home')}
+                onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); setIsMenuOpen(false); }}
                 className="text-black hover:text-blue-600 font-semibold transition-colors px-2 py-1 rounded"
               >
                 Home
               </button>
               <button
-                onClick={() => scrollToSection('services')}
+                onClick={() => { navigate('/printer-support-system'); setIsMenuOpen(false); }}
+                className="text-black hover:text-blue-600 font-semibold transition-colors px-2 py-1 rounded"
+              >
+                Printer Support
+              </button>
+              <button
+                onClick={() => { navigate('/'); setTimeout(() => { const el = document.getElementById('services'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 100); setIsMenuOpen(false); }}
                 className="text-black hover:text-blue-600 font-semibold transition-colors px-2 py-1 rounded"
               >
                 Services
               </button>
               <button
-                onClick={() => scrollToSection('printers')}
+                onClick={() => { navigate('/'); setTimeout(() => { const el = document.getElementById('printers'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 100); setIsMenuOpen(false); }}
                 className="text-black hover:text-blue-600 font-semibold transition-colors px-2 py-1 rounded"
               >
                 Printer Types
               </button>
-              {/* <button
-                onClick={() => scrollToSection('about')}
-                className="text-black hover:text-blue-600 font-semibold transition-colors px-2 py-1 rounded"
-              >
-                About
-              </button> */}
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => { navigate('/'); setTimeout(() => { const el = document.getElementById('contact'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 100); setIsMenuOpen(false); }}
                 className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-bold shadow-md border border-blue-600"
               >
                 Get Support Now
@@ -101,43 +89,34 @@ const Header = () => {
             <div className="md:hidden bg-white border-t border-gray-200">
               <div className="px-4 py-6 space-y-4">
                 <button
-                  onClick={() => scrollToSection('home')}
+                  onClick={() => { setIsMenuOpen(false); navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                   className="block text-black hover:text-blue-600 font-semibold transition-colors"
                 >
                   Home
                 </button>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => { setIsMenuOpen(false); navigate('/printer-support-system'); }}
+                  className="block text-black hover:text-blue-600 font-semibold transition-colors"
+                >
+                  Printer Support
+                </button>
+                <button
+                  onClick={() => { setIsMenuOpen(false); navigate('/'); setTimeout(() => { const el = document.getElementById('services'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 100); }}
                   className="block text-black hover:text-blue-600 font-semibold transition-colors"
                 >
                   Services
                 </button>
                 <button
-                  onClick={() => scrollToSection('printers')}
+                  onClick={() => { setIsMenuOpen(false); navigate('/'); setTimeout(() => { const el = document.getElementById('printers'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 100); }}
                   className="block text-black hover:text-blue-600 font-semibold transition-colors"
                 >
                   Printer Types
                 </button>
-                {/* <button
-                  onClick={() => scrollToSection('about')}
-                  className="block text-black hover:text-blue-600 font-semibold transition-colors"
-                >
-                  About
-                </button> */}
                 <button
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => { setIsMenuOpen(false); navigate('/'); setTimeout(() => { const el = document.getElementById('contact'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 100); }}
                   className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-bold shadow-md border border-blue-600 w-full"
                 >
                   Get Support Now
-                </button>
-                <button
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    navigate('/printer-support-system');
-                  }}
-                  className="block text-black bg-blue-100 hover:bg-blue-200 font-semibold transition-colors px-3 py-1 rounded border border-blue-200 w-full"
-                >
-                  Printer Support System
                 </button>
               </div>
             </div>
@@ -148,4 +127,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header; 
