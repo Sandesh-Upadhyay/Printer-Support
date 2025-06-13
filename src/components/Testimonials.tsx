@@ -6,28 +6,22 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      title: "CEO, TechVision Inc.",
-      company: "Fortune 500 Technology Company",
-      content: "AllitExpert transformed our digital infrastructure completely. Their strategic approach and technical expertise resulted in a 40% increase in operational efficiency. The team's dedication and professionalism exceeded all expectations.",
+      name: "Rob Miller",
+      content: "I'm happy with your service so far & don't have any ideas. Thanks for being there to fix any problems that may arise. Take Care n God Bless.",
       rating: 5,
-      image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://ui-avatars.com/api/?name=Rob+Miller&background=0D8ABC&color=fff"
     },
     {
-      name: "Robert Thompson",
-      title: "CFO, GlobalTrade Solutions",
-      company: "International Trading Corporation",
-      content: "The financial restructuring strategy provided by AllitExpert saved our company over $2M annually. Their analytical approach and attention to detail helped us navigate complex market challenges with confidence.",
+      name: "David G",
+      content: "I am happy that the professional who helped me was very nice and did a very good job in fixing my problem. Thank you.",
       rating: 5,
-      image: "https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://ui-avatars.com/api/?name=David+G&background=0D8ABC&color=fff"
     },
     {
-      name: "Lisa Chen",
-      title: "VP Operations, MedTech Innovations",
-      company: "Healthcare Technology Startup",
-      content: "From startup to IPO, AllitExpert guided us through every critical decision. Their expertise in process optimization and strategic planning was instrumental in our successful market expansion.",
+      name: "Mary Jane",
+      content: "As usual, your technician was great. She was extremely competent and polite as well. Thank you very much.",
       rating: 5,
-      image: "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://ui-avatars.com/api/?name=Mary+Jane&background=0D8ABC&color=fff"
     }
   ];
 
@@ -45,32 +39,25 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Client Success Stories
+            What Customers Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how we've helped organizations achieve remarkable results and 
-            transform their business operations.
+            Read what our satisfied customers have to say about our printer support services.
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 md:p-12">
+          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
             <div className="text-center">
               <Quote className="text-blue-600 mx-auto mb-6" size={48} />
               
-              <blockquote className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed font-medium">
+              <blockquote className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed font-medium italic">
                 "{testimonials[currentIndex].content}"
               </blockquote>
-              
-              <div className="flex items-center justify-center mb-6">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} className="text-yellow-400 fill-current mx-1" size={20} />
-                ))}
-              </div>
               
               <div className="flex items-center justify-center">
                 <img 
@@ -81,12 +68,6 @@ const Testimonials = () => {
                 <div className="text-left">
                   <div className="font-bold text-gray-900 text-lg">
                     {testimonials[currentIndex].name}
-                  </div>
-                  <div className="text-blue-600 font-semibold">
-                    {testimonials[currentIndex].title}
-                  </div>
-                  <div className="text-gray-600 text-sm">
-                    {testimonials[currentIndex].company}
                   </div>
                 </div>
               </div>
@@ -120,6 +101,16 @@ const Testimonials = () => {
               />
             ))}
           </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <a 
+            href="tel:+18884046710"
+            className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-colors inline-flex items-center gap-3"
+          >
+            Call Now for Instant Support: +1-(888) 404-6710
+          </a>
         </div>
       </div>
     </section>

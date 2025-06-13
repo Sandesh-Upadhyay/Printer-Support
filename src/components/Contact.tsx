@@ -77,7 +77,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Call Us</div>
-                  <div className="text-gray-600">+1 (555) 123-4567</div>
+                  <div className="text-gray-600">+1-(888)-404-6710</div>
                 </div>
               </div>
 
@@ -92,14 +92,22 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white relative">
+              <div className="absolute top-4 right-4 text-3xl font-bold">
+                24/7
+              </div>
               <h4 className="text-xl font-bold mb-4">Free Consultation</h4>
               <p className="mb-4">
                 Schedule a 30-minute consultation with one of our experts to discuss your project needs.
               </p>
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                Book Now
-              </button>
+              <div className="flex items-center justify-between">
+                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold">
+                  Book Now
+                </button>
+                <span className="text-2xl font-bold">
+                  +1-(888)-404-6710
+                </span>
+              </div>
             </div>
           </div>
 
@@ -205,7 +213,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
                 >
                   Send Message
                   <Send size={20} />
