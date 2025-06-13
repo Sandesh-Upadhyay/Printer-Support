@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { CheckCircle, Phone, X } from 'lucide-react';
 
-const brands = [
+type Brand = 'HP' | 'Canon' | 'Epson' | 'Brother' | 'Samsung' | 'Xerox' | 'Ricoh' | 'Konica Minolta' | 'Tally' | 'Kyocera' | 'Panasonic' | 'Fujitsu';
+
+const brands: Brand[][] = [
   ['HP', 'Tally'],
   ['Canon', 'Kyocera'],
   ['Epson', 'Panasonic'],
@@ -9,7 +12,7 @@ const brands = [
   ['Ricoh', 'Konica Minolta'],
 ];
 
-const issuesMap = {
+const issuesMap: Record<Brand, string[]> = {
   HP: [
     'HP Printer Offline',
     'HP Printer Not Printing',
@@ -181,58 +184,103 @@ const issuesMap = {
 };
 
 const PrinterSupportSystem = () => {
-  const [selectedBrand, setSelectedBrand] = useState('HP');
-  const issues = issuesMap[selectedBrand] || [];
+  const [selectedBrand, setSelectedBrand] = useState<Brand>('HP');
+  const [showModal, setShowModal] = useState(false);
+  const [selectedIssue, setSelectedIssue] = useState<string | null>(null);
+  const issues = issuesMap[selectedBrand];
   const heading = `${selectedBrand.toUpperCase()} PRINTER`;
 
+  const handleContact = (method: 'call' | 'email') => {
+    if (method === 'call') {
+      window.location.href = 'tel:+1-(888) 404-6710';
+    } else {
+      window.location.href = 'mailto:info@allitexpert.com';
+    }
+  };
+
+  const handleIssueClick = (issue: string) => {
+    setSelectedIssue(issue);
+    setShowModal(true);
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-10 px-2">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-6xl flex flex-col md:flex-row overflow-hidden">
-        {/* Brand List */}
-        <div className="w-full md:w-1/3 border-r border-gray-200 p-6 bg-gray-100">
-          <div className="grid grid-cols-2 gap-0">
-            {brands.map((row, i) => (
-              <React.Fragment key={i}>
-                <div
-                  className={`py-4 px-2 text-center text-lg font-semibold cursor-pointer transition-colors ${
-                    row[0] === selectedBrand
-                      ? 'bg-green-700 text-white'
-                      : i === 0
-                      ? 'bg-green-200 text-green-900 rounded-tl-xl'
-                      : 'text-gray-900'
-                  }`}
-                  onClick={() => setSelectedBrand(row[0])}
-                >
-                  {row[0]}
-                </div>
-                <div
-                  className={`py-4 px-2 text-center text-lg font-semibold cursor-pointer transition-colors ${
-                    row[1] === selectedBrand
-                      ? 'bg-green-700 text-white'
-                      : i === 0
-                      ? 'rounded-tr-xl'
-                      : 'text-gray-900'
-                  }`}
-                  onClick={() => setSelectedBrand(row[1])}
-                >
-                  {row[1]}
-                </div>
-              </React.Fragment>
-            ))}
+    <div className="min-h-screen bg-white py-8 px-2 sm:px-4 font-serif">
+      <div className="w-full">
+        <h2 className="text-3xl font-bold text-[#88956e] mb-8 text-center">{heading}</h2>
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Brand List */}
+          <div className="lg:w-1/3">
+            <div className="grid grid-cols-2 divide-x border border-gray-200 rounded-lg overflow-hidden shadow-lg">
+              {brands.map((row, i) => (
+                <React.Fragment key={i}>
+                  {row.map((brand, j) => (
+                    <button
+                      key={`${i}-${j}`}
+                      onClick={() => setSelectedBrand(brand)}
+                      className={`
+                        p-6 text-center text-lg transition-all duration-300 font-serif
+                        ${brand === selectedBrand 
+                          ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-inner' 
+                          : 'bg-white text-gray-700 hover:bg-gradient-to-r hover:from-blue-500 hover:to-indigo-500 hover:text-white'
+                        }
+                        border-b border-gray-200
+                        w-full
+                      `}
+                    >
+                      {brand}
+                    </button>
+                  ))}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
-        </div>
-        {/* Printer Issues */}
-        <div className="w-full md:w-2/3 p-8">
-          <h2 className="text-3xl font-bold text-green-900 mb-8 text-center">{heading}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {issues.map((issue, idx) => (
-              <div key={idx} className="bg-white border border-gray-300 rounded-xl p-6 text-lg font-medium text-gray-900 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-                {issue}
-              </div>
-            ))}
+
+          {/* Issues Grid */}
+          <div className="lg:w-2/3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {issues.map((issue, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleIssueClick(issue)}
+                  className="w-full flex items-center bg-gradient-to-r from-white via-blue-50 to-indigo-50 border border-blue-100 rounded-xl shadow hover:shadow-xl hover:scale-105 transition-all duration-300 py-4 px-4 mb-2 text-left gap-2"
+                >
+                  <CheckCircle className="text-green-500 mr-3 flex-shrink-0" size={20} />
+                  <span className="text-gray-700 font-medium">{issue}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Modal for Contact Expert */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full relative animate-fade-in mx-2">
+            <button
+              className="absolute top-3 right-3 text-gray-400 hover:text-gray-700"
+              onClick={() => setShowModal(false)}
+              aria-label="Close"
+            >
+              <X size={28} />
+            </button>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact our expert</h3>
+              <p className="text-gray-700 mb-6">Our experts will provide you a resolution for:</p>
+              <div className="bg-blue-50 text-blue-700 rounded-lg px-4 py-2 mb-6 font-semibold text-base">
+                {selectedIssue}
+              </div>
+              <button
+                onClick={() => handleContact('call')}
+                className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-6 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                <Phone size={24} className="text-yellow-300" />
+                Call Now: +1-(888) 404-6710
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

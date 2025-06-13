@@ -4,16 +4,21 @@
 
 /* Added printer bug theme variables */
 :root {
-  --printer-bug-bg: #0a1a2a;
-  --printer-bug-text: #e0f7ff;
-  --printer-font: "Courier New", monospace;
+  --printer-bug-bg: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 50%, #bae6fd 100%); /* premium sky blue gradient */
+  --printer-bug-text: #0f172a; /* slate-900 */
+  --printer-font: 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 
 /* Apply printer bug theme globally */
-body {
-  background-color: var(--printer-bug-bg);
+body, html.light body {
+  background: var(--printer-bug-bg);
   color: var(--printer-bug-text);
   font-family: var(--printer-font);
+}
+
+html.dark body {
+  background-color: #18181b;
+  color: #f3f4f6;
 }
 
 @keyframes fade-in {
@@ -22,4 +27,57 @@ body {
 }
 .animate-fade-in {
   animation: fade-in 0.3s ease;
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2000ms;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4000ms;
+  }
+}
+
+/* Custom transitions */
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Blur effect transitions */
+.backdrop-blur-transition {
+  transition: backdrop-filter 0.3s ease;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 15s ease infinite;
+  background-size: 200% 200%;
 }
