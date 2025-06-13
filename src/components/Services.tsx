@@ -22,7 +22,7 @@ const Services = () => {
       icon: <Wifi className="text-green-600" size={40} />,
       title: "Network & Connectivity Issues",
       description: "Resolve Wi-Fi connection problems, network printer setup, and wireless connectivity issues.",
-      features: ["Wi-Fi Connection", "Network Setup", "Wireless Troubleshooting", "Router Configuration"]
+      features: ["Wi-Fi Connection", "Network Setup", "Wireless Printer Help", "Router Configuration"]
     },
     {
       icon: <Download className="text-purple-600" size={40} />,
@@ -38,15 +38,15 @@ const Services = () => {
     },
     {
       icon: <Wrench className="text-yellow-600" size={40} />,
-      title: "Troubleshooting & Repair",
-      description: "Comprehensive troubleshooting for all printer problems and technical repair assistance.",
-      features: ["Problem Diagnosis", "Technical Repair", "Performance Issues", "Error Codes"]
+      title: "Printer Help & Support",
+      description: "Comprehensive printer help for all printer problems and technical support assistance.",
+      features: ["Problem Diagnosis", "Technical Support", "Performance Issues", "Error Codes"]
     },
     {
       icon: <Printer className="text-indigo-600" size={40} />,
-      title: "All Printer Brands Support",
-      description: "Support for HP, Canon, Epson, Brother, Dell, Lexmark and all major printer brands.",
-      features: ["HP Printers", "Canon Support", "Epson Help", "All Brands"]
+      title: "All Printer Support",
+      description: "Support for all major printer brands and models.",
+      features: ["Printer Help", "Printer Support", "Printer Assistance", "All Models"]
     }
   ];
 
