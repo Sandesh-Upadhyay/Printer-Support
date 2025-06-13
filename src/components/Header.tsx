@@ -1,11 +1,10 @@
 import React from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
-import PrinterSupportDashboard from './PrinterSupportDashboard';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [dashboardOpen, setDashboardOpen] = React.useState(false);
-  const [selectedBrand, setSelectedBrand] = React.useState('HP');
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -46,13 +45,10 @@ const Header = () => {
               </div>
               <div className="ml-2 hidden sm:block">
                 <button
-                  className="text-sm font-medium text-black bg-blue-100 hover:bg-blue-200 px-3 py-1 rounded transition-colors border border-blue-200"
-                  onClick={() => {
-                    setSelectedBrand('HP');
-                    setDashboardOpen(true);
-                  }}
+                  className="text-sm font-medium text-black bg-blue-100 hover:bg-blue-200 px-3 py-1 rounded transition-colors border border-blue-200 mr-2"
+                  onClick={() => navigate('/printer-support-system')}
                 >
-                  Printer Support Services
+                  Printer Support System
                 </button>
               </div>
             </div>
@@ -134,18 +130,20 @@ const Header = () => {
                 >
                   Get Support Now
                 </button>
+                <button
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    navigate('/printer-support-system');
+                  }}
+                  className="block text-black bg-blue-100 hover:bg-blue-200 font-semibold transition-colors px-3 py-1 rounded border border-blue-200 w-full"
+                >
+                  Printer Support System
+                </button>
               </div>
             </div>
           )}
         </div>
       </header>
-
-      {dashboardOpen && (
-        <PrinterSupportDashboard
-          brand={selectedBrand}
-          onClose={() => setDashboardOpen(false)}
-        />
-      )}
     </>
   );
 };
