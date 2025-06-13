@@ -1,10 +1,11 @@
 import React from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import PrinterSupportDashboard from './PrinterSupportDashboard';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const navigate = useNavigate();
+  const [dashboardOpen, setDashboardOpen] = React.useState(false);
+  const [selectedBrand, setSelectedBrand] = React.useState('HP');
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -46,7 +47,10 @@ const Header = () => {
               <div className="ml-2 hidden sm:block">
                 <button
                   className="text-sm font-medium text-black bg-blue-100 hover:bg-blue-200 px-3 py-1 rounded transition-colors border border-blue-200"
-                  onClick={() => navigate('/printer-support-system')}
+                  onClick={() => {
+                    setSelectedBrand('HP');
+                    setDashboardOpen(true);
+                  }}
                 >
                   Printer Support Services
                 </button>
@@ -135,6 +139,13 @@ const Header = () => {
           )}
         </div>
       </header>
+
+      {dashboardOpen && (
+        <PrinterSupportDashboard
+          brand={selectedBrand}
+          onClose={() => setDashboardOpen(false)}
+        />
+      )}
     </>
   );
 };
