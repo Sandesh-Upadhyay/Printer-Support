@@ -65,6 +65,14 @@ const Services = () => {
     "Install latest printer drivers"
   ];
 
+  const handleContact = (method: 'call' | 'email') => {
+    if (method === 'call') {
+      window.location.href = 'tel:+1-(888) 404-6710';
+    } else {
+      window.location.href = 'mailto:info@allitexpert.com';
+    }
+  };
+
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,8 +114,8 @@ const Services = () => {
               </ul>
               
               <a 
-                href="tel:+18884046710"
-                className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+                onClick={() => handleContact('call')}
+                className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Phone size={16} />
                 Get Help Now
@@ -132,8 +140,8 @@ const Services = () => {
           
           <div className="text-center mt-8">
             <a 
-              href="tel:+18884046710"
-              className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-colors inline-flex items-center gap-3"
+              onClick={() => handleContact('call')}
+              className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-colors inline-flex items-center gap-3 cursor-pointer"
             >
               <Phone size={20} />
               Call Now for Instant Support: +1-(888) 404-6710
