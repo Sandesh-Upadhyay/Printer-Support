@@ -73,12 +73,12 @@ const Header = () => {
               >
                 Printer Types
               </button>
-              <button
+              {/* <button
                 onClick={() => scrollToSection('about')}
                 className="text-black hover:text-blue-600 font-semibold transition-colors px-2 py-1 rounded"
               >
                 About
-              </button>
+              </button> */}
               <button
                 onClick={() => scrollToSection('contact')}
                 className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-bold shadow-md border border-blue-600"
@@ -118,12 +118,12 @@ const Header = () => {
                 >
                   Printer Types
                 </button>
-                <button
+                {/* <button
                   onClick={() => scrollToSection('about')}
                   className="block text-black hover:text-blue-600 font-semibold transition-colors"
                 >
                   About
-                </button>
+                </button> */}
                 <button
                   onClick={() => scrollToSection('contact')}
                   className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-bold shadow-md border border-blue-600 w-full"

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Phone, MessageSquare } from 'lucide-react';
 
 const brands = [
   ['HP', 'Tally'],
@@ -186,55 +187,70 @@ const PrinterSupportSystem = () => {
   const heading = `${selectedBrand.toUpperCase()} PRINTER`;
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-10 px-2">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-6xl flex flex-col md:flex-row overflow-hidden">
-        {/* Brand List */}
-        <div className="w-full md:w-1/3 border-r border-gray-200 p-6 bg-gray-100">
-          <div className="grid grid-cols-2 gap-0">
-            {brands.map((row, i) => (
-              <React.Fragment key={i}>
-                <div
-                  className={`py-4 px-2 text-center text-lg font-semibold cursor-pointer transition-colors ${
-                    row[0] === selectedBrand
-                      ? 'bg-green-700 text-white'
-                      : i === 0
-                      ? 'bg-green-200 text-green-900 rounded-tl-xl'
-                      : 'text-gray-900'
-                  }`}
-                  onClick={() => setSelectedBrand(row[0])}
+    <div className="min-h-screen bg-white py-8 px-4 font-serif">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-[#88956e] mb-8 text-center">{heading}</h2>
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Brand List */}
+          <div className="lg:w-1/3">
+            <div className="grid grid-cols-2 divide-x border border-gray-200 rounded-lg overflow-hidden">
+              {brands.map((row, i) => (
+                <React.Fragment key={i}>
+                  {row.map((brand, j) => (
+                    <button
+                      key={`${i}-${j}`}
+                      onClick={() => setSelectedBrand(brand)}
+                      className={`
+                        p-6 text-center text-lg transition-colors font-serif
+                        ${brand === selectedBrand 
+                          ? 'bg-[#88956e] text-white' 
+                          : 'text-gray-700 hover:bg-[#88956e] hover:text-white'
+                        }
+                        border-b border-gray-200
+                      `}
+                    >
+                      {brand}
+                    </button>
+                  ))}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+
+          {/* Issues Grid */}
+          <div className="lg:w-2/3">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+              {issues.map((issue, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => window.location.href = 'tel:+1-(888) 404-6710'}
+                  className="p-4 bg-white border border-gray-200 rounded-lg text-left hover:border-[#88956e] hover:shadow-md transition-all font-serif"
                 >
-                  {row[0]}
-                </div>
-                <div
-                  className={`py-4 px-2 text-center text-lg font-semibold cursor-pointer transition-colors ${
-                    row[1] === selectedBrand
-                      ? 'bg-green-700 text-white'
-                      : i === 0
-                      ? 'rounded-tr-xl'
-                      : 'text-gray-900'
-                  }`}
-                  onClick={() => setSelectedBrand(row[1])}
-                >
-                  {row[1]}
-                </div>
-              </React.Fragment>
-            ))}
+                  <span className="text-gray-800">
+                    {issue}
+                  </span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
-        {/* Printer Issues */}
-        <div className="w-full md:w-2/3 p-8">
-          <h2 className="text-3xl font-bold text-green-900 mb-8 text-center">{heading}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {issues.map((issue, idx) => (
-              <div key={idx} className="bg-white border border-gray-300 rounded-xl p-6 text-lg font-medium text-gray-900 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-                {issue}
-              </div>
-            ))}
+      </div>
+
+      {/* Fixed Contact Buttons */}
+      <div className="fixed right-4 z-50 space-y-4 font-serif" style={{ bottom: '4rem' }}>
+        <a
+          href="tel:+1-(888) 404-6710"
+          className="bg-blue-600 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-blue-700 transition-colors shadow-lg"
+        >
+          <Phone size={20} className="text-yellow-300" />
+          <div className="flex flex-col">
+            <span className="text-yellow-300 text-sm">Call Now</span>
+            <span className="text-white">+1-(888) 404-6710</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );
 };
 
-export default PrinterSupportSystem; 
+export default PrinterSupportSystem;
