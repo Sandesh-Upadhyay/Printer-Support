@@ -23,9 +23,9 @@ const PrinterSupportSystem = () => {
 
   const handleContact = (method: 'call' | 'email') => {
     if (method === 'call') {
-      window.location.href = 'tel:+1-(888) 404-6710';
+      window.location.href = 'tel:+18775933790';
     } else {
-      window.location.href = 'mailto:info@allitexpert.com';
+      window.location.href = 'mailto:Contact@Geekfixprinter.online';
     }
   };
 
@@ -63,8 +63,8 @@ const PrinterSupportSystem = () => {
                 <X size={28} />
               </button>
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact our expert</h3>
-                <p className="text-gray-700 mb-6">Our experts will provide you a resolution for:</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact our professional team</h3>
+                <p className="text-gray-700 mb-6">Our professionals will provide you a resolution for:</p>
                 <div className="bg-blue-50 text-blue-700 rounded-lg px-4 py-2 mb-6 font-semibold text-base">
                   {selectedIssue}
                 </div>
@@ -73,7 +73,7 @@ const PrinterSupportSystem = () => {
                   className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-6 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-lg hover:scale-105 transition-all duration-300"
                 >
                   <Phone size={24} className="text-yellow-300" />
-                  Call Now: +1-(888) 404-6710
+                  Call Now: +1 (877) 593-3790
                 </button>
               </div>
             </div>

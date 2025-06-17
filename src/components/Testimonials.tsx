@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Quote, Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -106,10 +106,10 @@ const Testimonials = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <a 
-            href="tel:+18884046710"
+            href="tel:+18775933790"
             className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-colors inline-flex items-center gap-3"
           >
-            Call Now for Instant Support: +1-(888) 404-6710
+            Call Now for Professional Support: +1 (877) 593-3790
           </a>
         </div>
       </div>

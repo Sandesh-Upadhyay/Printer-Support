@@ -13,9 +13,9 @@ import React from 'react';
 
 const PrinterSetupPage = () => (
   <div className="max-w-3xl mx-auto py-12 px-4 text-gray-900 dark:text-gray-100">
-    <h1 className="text-3xl font-bold mb-6 text-blue-800 dark:text-blue-300">Instant Help</h1>
+    <h1 className="text-3xl font-bold mb-6 text-blue-800 dark:text-blue-300">Professional Help</h1>
     <h2 className="text-2xl font-semibold mb-4">123.hp.com/setup - HP Smart: 123.hp.com Easy Setup & Install HP Printers</h2>
-    <p className="mb-4">Our techies will diagnose your printer errors and troubleshoot it and restore your PC to its original state. Chat with Expert to get instant Solutions. <a href="https://123.hp.com/setup" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">123.hp.com/setup</a></p>
+    <p className="mb-4">Our technicians will diagnose your printer errors and troubleshoot it and restore your PC to its original state. Chat with Professional to get professional Solutions. <a href="https://123.hp.com/setup" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">123.hp.com/setup</a></p>
     <ul className="list-disc pl-6 mb-4">
       <li>123.hp.com/setup help</li>
       <li>123 hp com setup</li>
@@ -70,11 +70,11 @@ const PrinterSetupPage = () => (
     <hr className="my-10 border-blue-200 dark:border-blue-800" />
     <h2 className="text-2xl font-bold mb-4 text-blue-700 dark:text-blue-300">Wireless Printer Setup Support By Experts</h2>
     <p className="mb-4 font-semibold">Let Fix My Product</p>
-    <a href="tel:+18884046710" className="inline-block mb-4 px-6 py-2 bg-blue-600 text-white rounded-full font-bold shadow hover:bg-blue-700 transition">Call</a>
+    <a href="tel:+18775933790" className="inline-block mb-4 px-6 py-2 bg-blue-600 text-white rounded-full font-bold shadow hover:bg-blue-700 transition">Call</a>
     <h3 className="text-xl font-semibold mt-8 mb-2">HP Wireless Printer Setup</h3>
     <p className="mb-4">HP is one of the leaders in the field of IT hardware and doesn't need any introduction, most people are using HP's products HP is the leader in Printers, smart devices Laptops, Computers, Tablets, etc. The most important commercial product of HP is its Printers, which are popular for their durability, compact design, and high configuration. Whenever HP introduces new product, innovation is one of the cornerstones in its product development. Nowadays, Wireless Printers are in trend as everything is becoming wireless. Following the same trend, HP additionally introduced its HP Wireless Printers in the market. Most people do not find it easy to manage this printer; therefore, Wireless Printer Setup Support is an excellent tool for you.</p>
     <p className="mb-4">Our Technical Support Professionals have proper instructions for your HP Wireless Printer Setup. As some people don't have proper technical knowledge about setting up their wireless printers, it's best to take the help of our skilled specialists. Our Technical Support Specialists are one of the best for help in setting up your wireless printer. Our Technical Support Specialists are available 24X7 to give you essential tips for the Wireless Printer Setup Support.</p>
-    <p className="mb-4">Feel free to call our Printer Support Toll-Free Number to get straightforward instructions from our certified and experienced professionals regarding setting up your wireless printer.</p>
+    <p className="mb-4">Feel free to call our Printer Support Number to get straightforward instructions from our professional and experienced technicians regarding setting up your wireless printer.</p>
     <h3 className="text-xl font-semibold mt-8 mb-2">123 HP Wireless Printer Setup</h3>
     <ul className="list-disc pl-6 mb-4">
       <li>Connect your printer to your computer via a USB cable and follow the on-screen instructions prompted on your screen.</li>
@@ -111,13 +111,13 @@ const PrinterSetupPage = () => (
       <li>Printer Tech Support</li>
     </ul>
     <div className="bg-blue-50 dark:bg-gray-800 rounded-xl p-6 my-6">
-      <h4 className="font-bold text-lg mb-2 text-blue-700 dark:text-blue-200">We Provide Online Printer Offline Support By Independent Experts</h4>
-      <p className="mb-2">Call US: <span className="font-bold text-blue-700 dark:text-blue-200">+1-(888) 404-6710</span></p>
-      <p className="mb-2">Printer Offline Support Just Call Our Toll Free Number</p>
-      <p className="mb-2">info@allitexpert.com</p>
+      <h4 className="font-bold text-lg mb-2 text-blue-700 dark:text-blue-200">We Provide Online Printer Offline Support By Independent Professionals</h4>
+      <p className="mb-2">Call US: <span className="font-bold text-blue-700 dark:text-blue-200">+1 (877) 593-3790</span></p>
+      <p className="mb-2">Printer Offline Support Just Call Our Support Number</p>
+      <p className="mb-2">Contact@Geekfixprinter.online</p>
     </div>
     <div className="mt-8 text-xs text-gray-500 dark:text-gray-400">
-      <p>Independent Service Provider All IT Expert also provides Onsite and Online On-Site Support for different third-party software and hardware. The use of trademarks and names is only for reference purposes and is not intended to suggest that All IT Expert has business associations with them. If the product has warranty coverage, the manufacturer may offer free support services.</p>
+      <p>Independent Service Provider All IT Expert also provides Onsite and Online On-Site Support for different third-party software and hardware. The use of trademarks and names is only for reference purposes and is not intended to suggest that All IT Expert has business associations with them. If the product has warranty coverage, the manufacturer may offer professional support services.</p>
     </div>
   </div>
 );
@@ -151,18 +151,18 @@ function App() {
 
       {/* Bottom fixed button - Modern Design */}
       <div className="fixed bottom-0 left-0 right-0 z-50">
-        <div className="w-full px-4">
+        <div className="w-full px-2 sm:px-4">
           <a
-            href="tel:+18884046710"
-            className="flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-6 py-4 rounded-t-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            href="tel:+18775933790"
+            className="flex items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-3 sm:px-6 py-3 sm:py-4 rounded-t-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
           >
-            <div className="flex items-center gap-2">
-              <Printer className="text-yellow-300" size={24} />
-              <span className="font-bold text-lg">Printer Support Toll Free:</span>
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Printer className="text-yellow-300 sm:w-6 sm:h-6" size={20} />
+              <span className="font-bold text-sm sm:text-lg">Printer Support:</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
-              <Phone className="text-yellow-300" size={20} />
-              <span className="font-bold text-lg tracking-wide">+1-(888) 404-6710</span>
+            <div className="flex items-center gap-1 sm:gap-2 bg-white/10 px-2 sm:px-4 py-1 sm:py-2 rounded-full">
+              <Phone className="text-yellow-300 sm:w-5 sm:h-5" size={16} />
+              <span className="font-bold text-sm sm:text-lg tracking-wide">+1 (877) 593-3790</span>
             </div>
           </a>
         </div>
