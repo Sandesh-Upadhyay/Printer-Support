@@ -74,8 +74,8 @@ npm run dev
 
 ## 💬 Contact Integration
 
-- **Phone**: +1-(888) 404-6710  
-- **Email**: [info@allitexpert.com](mailto:info@allitexpert.com)  
+- **Phone**: +1 (877) 593-3790  
+- **Email**: [Contact@Geekfixprinter.online](mailto:Contact@Geekfixprinter.online)  
 - **Live Chat**: Integrated in-app
 
 ---
@@ -109,5 +109,5 @@ This project is licensed under the **MIT License** — feel free to use it for p
 
 For technical support or inquiries:
 
-- 📞 **Phone**: +1-(888) 404-6710  
-- 📧 **Email**: [info@allitexpert.com](mailto:info@allitexpert.com)
+- 📞 **Phone**: +1 (877) 593-3790  
+- 📧 **Email**: [Contact@Geekfixprinter.online](mailto:Contact@Geekfixprinter.online)
