@@ -5,13 +5,13 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: <Phone className="text-blue-600" size={40} />,
-      title: "Call Our Toll Free Number",
-      description: "Connect with our certified technicians by calling our toll-free number: +1-(888) 404-6710"
+      title: "Call Our Support Number",
+      description: "Connect with our professional technicians by calling our support number: +1 (877) 593-3790"
     },
     {
       icon: <UserCheck className="text-green-600" size={40} />,
-      title: "Connect with Certified Technician",
-      description: "Our expert technicians will guide you through the process and understand your printer issues"
+      title: "Connect with Professional Technician",
+      description: "Our professional technicians will guide you through the process and understand your printer issues"
     },
     {
       icon: <CheckCircle className="text-purple-600" size={40} />,
@@ -28,7 +28,7 @@ const HowItWorks = () => {
             How It Works?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our Experts will provide service in three simple steps
+            Our Professional Team will provide service in three simple steps
           </p>
         </div>
 
@@ -56,10 +56,10 @@ const HowItWorks = () => {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <a 
-            href="tel:+18884046710"
+            href="tel:+18775933790"
             className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-colors inline-flex items-center gap-3"
           >
-            Call Now for Instant Support: +1-(888) 404-6710
+            Call Now for Professional Support: +1 (877) 593-3790
           </a>
         </div>
       </div>

@@ -55,7 +55,7 @@ const PrinterTypes = () => {
             Printer Types We Support
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our expert technicians provide comprehensive support for all major printer types. 
+            Our professional technicians provide comprehensive support for all major printer types. 
             Get professional assistance for setup, troubleshooting, and maintenance.
           </p>
         </div>
@@ -103,7 +103,7 @@ const PrinterTypes = () => {
               </div>
               
               <a 
-                href="tel:+18884046710"
+                href="tel:+18775933790"
                 className="w-full bg-blue-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-700 transition-colors text-center block"
               >
                 Get Support Now
@@ -115,14 +115,14 @@ const PrinterTypes = () => {
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 text-white text-center">
           <h3 className="text-3xl font-bold mb-4">Need Help with Your Printer?</h3>
           <p className="text-xl mb-8 text-blue-100">
-            Our certified technicians are ready to help you with any printer issue. 
-            Get instant support for all printer brands and models.
+            Our professional technicians are ready to help you with any printer issue. 
+            Get professional support for all printer brands and models.
           </p>
           <a 
-            href="tel:+18884046710"
+            href="tel:+18775933790"
             className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors inline-block"
           >
-            Call Now: +1-(888) 404-6710
+            Call Now: +1 (877) 593-3790
           </a>
         </div>
       </div>
